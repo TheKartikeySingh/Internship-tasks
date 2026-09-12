@@ -1,0 +1,53 @@
+{
+  "linear_regression": {
+    "rmse": 1.296105971813165,
+    "mae": 1.0249710296410044,
+    "r2": 0.8636206274319255
+  },
+  "random_forest_tuned": {
+    "rmse": 1.4489442765050229,
+    "mae": 1.1742708333333336,
+    "r2": 0.8295601936072432
+  },
+  "random_forest_cv_rmse_mean": 1.7266692020909935,
+  "random_forest_cv_rmse_std": 0.061646606535361914,
+  "best_params": {
+    "model__max_depth": null,
+    "model__min_samples_leaf": 1,
+    "model__n_estimators": 200
+  },
+  "top_features": [
+    {
+      "feature": "distance_km",
+      "importance": 0.5208507418802251
+    },
+    {
+      "feature": "weather_Clear",
+      "importance": 0.1911237227153291
+    },
+    {
+      "feature": "traffic_index",
+      "importance": 0.06466531023490235
+    },
+    {
+      "feature": "num_stops",
+      "importance": 0.044559034260948066
+    },
+    {
+      "feature": "weight_kg",
+      "importance": 0.03505959367064891
+    },
+    {
+      "feature": "driver_experience_years",
+      "importance": 0.02994359040635261
+    },
+    {
+      "feature": "weather_Storm",
+      "importance": 0.02715414238502766
+    },
+    {
+      "feature": "region_type_Rural",
+      "importance": 0.018875770577462113
+    }
+  ]
+}
