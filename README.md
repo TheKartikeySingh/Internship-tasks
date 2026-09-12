@@ -1,42 +1,47 @@
-# Logistics Data Analysis
+# Logistics Data Preprocessing Pipeline
 
-## Internship Task 1 — Strategic Planning Phase
+Simulated data collection and preprocessing workflow for a logistics
+(shipment tracking) dataset, built with pandas and numpy.
 
-This project presents a strategic data-analysis plan for improving logistics and supply-chain performance using Python.
-
-### Project Focus
-- Delivery delays
-- Transportation cost
-- Inventory efficiency
-- Route and carrier performance
-- Predictive analytics
-- Resource allocation
-
-### KPIs
-1. On-Time Delivery Rate
-2. Average Delivery Lead Time
-3. Inventory Turnover
-4. Transportation Cost per Shipment
-5. Stockout Rate
-
-### Planned Technologies
-- Python
-- Pandas
-- NumPy
-- Matplotlib / Seaborn
-- Scikit-learn
-- Optimization techniques
-
-### Repository Structure
-
-```text
-logistics-data-analysis/
-├── README.md
-├── requirements.txt
+## Structure
+```
+logistics-data-preprocessing/
 ├── data/
-├── notebooks/
+│   ├── raw_logistics_shipments.csv       # simulated raw dataset (with issues)
+│   ├── cleaned_logistics_shipments.csv   # output after pipeline runs
+│   └── cleaning_summary.txt              # generated run summary
 ├── src/
-└── reports/
+│   └── preprocess.py                     # main preprocessing pipeline
+├── docs/
+│   └── Logistics_Data_Preprocessing_Report.docx
+├── requirements.txt
+└── README.md
 ```
 
-See `reports/strategic_planning_report.docx` for the complete internship report.
+## Dataset
+200+ simulated shipment records with fields: `shipment_id`, `carrier`,
+`origin`, `destination`, `distance_km`, `weight_kg`,
+`transit_time_hours`, `delivery_cost_inr`, `on_time_flag`. Deliberately
+injected with missing values, outliers, duplicate rows, and
+inconsistent text casing to mimic real-world logistics data (modeled
+on public datasets such as DOT/Kaggle shipment and freight records).
+
+## Pipeline stages (`src/preprocess.py`)
+1. Load & inspect raw data
+2. Standardize categorical text formatting
+3. Remove duplicate records
+4. Handle missing values (median imputation, grouped by carrier)
+5. Detect & treat outliers (IQR method, winsorized/capped)
+6. Min-max normalize numeric features
+7. Export cleaned dataset + summary
+
+## Usage
+```bash
+pip install -r requirements.txt
+python src/preprocess.py
+```
+
+## Report
+See `docs/Logistics_Data_Preprocessing_Report.docx` for the full
+methodology write-up, rationale for each technique, and reflection on
+data quality's impact on logistics analytics.
