@@ -1,0 +1,7 @@
+This internship task demonstrates exploratory data analysis and visualization for a hypothetical logistics operation using Python. A reproducible dataset of 500 shipments is simulated with variables covering shipment volume, route distance, transportation cost, delivery time, delay hours, region, transport mode, traffic level and weather. The analysis calculates central tendencies, dispersion, distributions and correlations to establish a quantitative view of logistics performance.
+
+Multiple visualizations are included: a delivery-time histogram, regional delay comparison, distance-versus-cost scatter plot, transport-mode cost comparison, traffic-level delay comparison and a correlation matrix. Each visualization is selected because it answers a specific logistics question, such as identifying unusual delivery durations, locating regional bottlenecks, understanding cost drivers or evaluating the effect of congestion.
+
+The analysis produces practical findings from the simulated data, including the on-time delivery rate, highest-delay region, relationship between distance and transportation cost, and the association between traffic and delays. Recommendations focus on regional performance monitoring, traffic-aware scheduling, cost normalization, and further predictive analysis.
+
+The accompanying GitHub-ready repository contains the simulated dataset, Python EDA script, generated visualization images, README, data dictionary and analysis summary. The project is fully reproducible and clearly states that the data and findings are hypothetical.
